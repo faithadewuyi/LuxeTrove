@@ -23,6 +23,7 @@ export default {
 
       colors: {
         btn: "#FFD700",
+        btnlight: "#FFEB80",
         footer: "#27272B",
         textcol: "#000000",
         black: "#27272B",
