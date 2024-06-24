@@ -1,12 +1,34 @@
-import SideBar from "./Components/SideBar"
+
+import { Route, Routes } from "react-router-dom";
+
+import Account from "./Pages/Account";
+
+import Home from "./Pages/Home";
+
+
+
 
  
 
 function App() {
   return (
-    <div>
-      <SideBar/>
+    
+
+    <div className="bg-white h-full ">
+    
+       
+     <Routes>
+     
+      <Route path="/account/*" element={<Account/>}/>
+      <Route path="/" element={<Home/>}/>
+     
+
+     </Routes>
+      
+      
     </div>
+
+    
   )
 }
 

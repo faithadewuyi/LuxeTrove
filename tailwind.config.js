@@ -20,6 +20,10 @@ export default {
     },
 
     extend: {
+      backgroundImage: {
+        'hero-image': "url('/hero.png')",
+
+      },
 
       colors: {
         btn: "#FFD700",
