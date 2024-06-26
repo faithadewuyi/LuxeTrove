@@ -1,3 +1,4 @@
+/*NOT FULLY DONE!
 import React, { useState } from 'react';
 import { RiSendPlane2Fill } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
@@ -96,10 +97,10 @@ const ChatBot = () => {
         >
           Send
         </button>
-        */}
+        }
       </div>
     </div>
   );
 };
 
-export default ChatBot;
+export default ChatBot; */

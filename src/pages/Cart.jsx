@@ -1,3 +1,4 @@
+/*IN PROGRESS
 import React from "react";
 import { BsCart3 } from "react-icons/bs";
 
@@ -14,4 +15,4 @@ export const Cart = () => {
             
         </div>
     )
-}
+} */
