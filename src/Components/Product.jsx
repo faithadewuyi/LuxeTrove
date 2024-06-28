@@ -1,8 +1,8 @@
-import productImg from "../assets/bag.png"
-import productImg2 from "../assets/bag.png"
-import productImg3 from "../assets/bag.png"
-import productImg4 from "../assets/bag.png"
-import productImg5 from "../assets/bag.png"
+import productImg from "/bag.png"
+import productImg2 from "/pants.png"
+import productImg3 from "/dress.png"
+import productImg4 from "/ysl.png"
+import productImg5 from "/mini.png"
 import productImg6 from "../assets/bag.png"
 
 const Product =[
@@ -10,41 +10,37 @@ const Product =[
 
       {
           id: 1,
-          name: 'Hertfoid Upholstered Chair',
+          name: 'Gucci Bag',
           price: 101,
           image: productImg,
-          description: 'Hugo Boss Pants',
-          slug: 'hertfoid-upholstered-chair'
+          slug: 'Gucci Bag'
       },
       {
         id: 2,
-        name: 'Hertfoid Upholstered Chair',
+        name: 'Hugo Boss Pants',
         price: 101,
         image: productImg2,
-        description: 'Hugo Boss Pants',
-        slug: 'hertfoid-upholstered-chair'
+        slug: 'Hugo Boss Pants'
     },
     
     {
       id: 3,
-      name: 'Hertfoid Upholstered Chair',
+      name: 'Nicole Miller Dress',
       price: 101,
       image: productImg3,
-      description: 'Hugo Boss Pants',
-      slug: 'hertfoid-upholstered-chair'
+      slug: 'Nicole Miller Dress'
   },
   {
     id: 4,
-    name: 'Hertfoid Upholstered Chair',
-    price: 101,
+    name: 'YSL Bag',
+    price: 800,
     image: productImg4,
-    description: 'Hugo Boss Pants',
-    slug: 'hertfoid-upholstered-chair'
+    slug: 'YSL Bag'
 },
 {
   id: 5,
-  name: 'Hertfoid Upholstered Chair',
-  price: 101,
+  name: 'Gucci Mini Bag',
+  price: 50,
   image: productImg5,
   description: 'Hugo Boss Pants',
   slug: 'hertfoid-upholstered-chair'

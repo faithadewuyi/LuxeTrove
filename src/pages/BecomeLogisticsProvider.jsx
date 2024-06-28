@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 
 const BecomeLogisticsProvider = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +21,7 @@ const BecomeLogisticsProvider = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission (e.g., send data to API)
+    
     console.log('Form submitted:', formData);
     alert('Form submitted successfully!');
   };

@@ -1,5 +1,5 @@
-/*NOT FULLY DONE!
-import React, { useState } from 'react';
+
+import  { useState } from 'react';
 import { RiSendPlane2Fill } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
 import { IoPersonCircleOutline } from "react-icons/io5";
@@ -90,17 +90,17 @@ const ChatBot = () => {
         <div className='mt-3 absolute right-3' onClick={handleSend}>
           <RiSendPlane2Fill />
         </div>
-        {/* 
+        
         <button
           className="bg-yellow-400 text-white p-2 rounded-lg"
           
         >
           Send
         </button>
-        }
+      
       </div>
     </div>
   );
 };
 
-export default ChatBot; */
+export default ChatBot; 

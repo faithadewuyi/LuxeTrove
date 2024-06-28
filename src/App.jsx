@@ -2,7 +2,7 @@
 // import { useState } from 'react'
 import './App.css'
 // import { Cart } from './pages/Cart';
-import ChatBot from './pages/ChatBot';
+import ChatBot from './Pages/ChatBot';
 // import BecomeSalesRep from './pages/BecomeSalesRep';
 // import BecomeLogisticsProvider from './pages/BecomeLogisticsProvider';
 // import BecomeVendorHub from './pages/BecomeVendorHub';
