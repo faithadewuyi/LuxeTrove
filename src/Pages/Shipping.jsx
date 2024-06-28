@@ -6,13 +6,14 @@ import InputField from '../Components/InputField';
 function Shipping() {
   const form = useForm({
     defaultValues: {
-      firstname: "",
-      lastname: "",
-      email: "",
-      address: "",
-      password: "",
-      cpassword: "",
-      npassword: "",
+      houseno: "",
+      streetname: "",
+      city: "",
+      state: "",
+      postalcode: "",
+      phonenum: "",
+      addphonenum: "",
+      additional: "",
     },
     mode: "onTouched",
   });
@@ -36,112 +37,107 @@ function Shipping() {
 
   return (
     <div>
-      <form
-        onSubmit={handleSubmit(onSubmit, onError)}
-        noValidate
-        className="font-inter shadow-md p-4 pl-6 px-auto mt-5"
-      >
-        <h1 className="text-black text-[20px] font-bold py-2 mb-4">
-          Shipping Address
-        </h1>
 
-        <h1 className="text-black text-[20px] font-medium py-2 mb-4">
-          Add Address
-        </h1>
-        <div className=" mb-4">
-          <InputField
-            label="Address One"
-            placeholder="Adress One"
-            id=""
-            name="Address One"
-            register={register}
-            error={errors.address}
-            pattern={/[A-Za-z0-9]{3,16}$/}
-            required={true}
-            patternMessage=" Address should contain 3-16 characters and shouldn't contain any special characters" 
-             
-            className="border-none bg-lightgray rounded w-[350px]"/> 
-          
-          
-        </div>
-
+      <h1 className=" text-xl font-medium py-2 pl-6">
+        Shipping Address
+      </h1>
+    <form
+      onSubmit={handleSubmit(onSubmit, onError)}
+      noValidate
+      className="font-mon shadow-md px-4 pl-6 px-auto mt-5"
+    >
+       <h3 className=" text-base font-semibold py-2 mb-4 ">
+        Add Address
+      </h3>
+      {/* <div className="flex gap-[50px] mb-2"> */}
         <InputField
-            label="Address Two"
-            placeholder="Lagos"
-            id="address"
-            name="address"
-            type="address"
-            register={register}
-            error={errors.address}
-            pattern={/[A-Za-z0-9]{3,16}$/}
-            required={true}
-            patternMessage="Enter your address"
-            className="border-none bg-lightgray rounded w-[710px] mb-4"
-          />
-      
-        <div className=" gap-[50px] mb-4 space-y-2">
+          label="Add Address 1"
+          placeholder=""
+          id="houseno"
+          name="houseno"
+          register={register}
+          error={errors.houseno}
+          pattern={/^\d{3}$/}
+          required={true}
+          patternMessage="Enter your house number only in numbers"
+          className="border-darkgray border-2 text-base  text-black my-2 "
+        />
+
           <InputField
-            label="Email"
-            placeholder="sarah@luxemail.com"
-            id="email"
-            name="email"
-            type="email"
-            register={register}
-            error={errors.email}
-            pattern={
-              /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-            }
-            required={true}
-            patternMessage="Please enter a valid email address"
-            className="border-none bg-lightgray rounded w-[710px]"
-          />
-<div className="flex gap-[80px] mb-2 ">
-  <InputField
-    label="Town/City "
-    placeholder=""
-    id="firstname"
-    name="firstname"
-    register={register}
-    error={errors.firstname}
-    pattern={/[A-Za-z0-9]{3,16}$/}
-    required={true}
-    patternMessage="City should contain 3-16 characters and shouldn't contain any special characters"
-    className="border-none bg-lightgray rounded w-[250.33px]"
-  />
-  <InputField
-    label="Province/State"
-    placeholder=""
-    id="lastname"
-    name="lastname"
-    register={register}
-    error={errors.lastname}
-    pattern={/[A-Za-z0-9]{3,16}$/}
-    required={true}
-    patternMessage="State should contain 3-16 characters and shouldn't contain any special characters"
-    className="border-none bg-lightgray rounded w-[250.33px]"
-  />
-  <InputField
-    label="Postal Code"
-    placeholder=""
-    id="lastname"
-    name="lastname"
-    register={register}
-    error={errors.lastname}
-    pattern={/[A-Za-z0-9]{3,16}$/}
-    required={true}
-    patternMessage="Name should contain 3-16 characters and shouldn't contain any special characters"
-    className="border-none bg-lightgray rounded w-[250.33px]"
-  />
-</div>
-     </div>
-        <div className="flex flex-row gap-3 justify-end">
-          <button className="text-black text-base border-2 border-btn px-4 my-2 py-2 p-2 w-[169px] h-[50px] text-[16px]">Cancel</button>
-          <button className="bg-btn text-white p-2 hover:bg-gray px-4 my-2 py-2 w-[169px] h-[50px] text-[16px]">
-            Save Changes
-          </button>
-        </div>
-      </form>
-    </div>
+          label="Add Address 2"
+          placeholder=""
+          id="houseno"
+          name="houseno"
+          register={register}
+          error={errors.houseno}
+          pattern={/^\d{3}$/}
+          required={true}
+          patternMessage="Enter your house number only in numbers"
+          className="border-darkgray border-2 text-base  text-black my-2 w-[330px]"
+        />
+        <InputField
+          label="Country"
+          placeholder=""
+          id="streetname"
+          name="streetname"
+          register={register}
+          error={errors.streetname}
+          pattern={/[A-Za-z0-9]{3,16}$/}
+          required={true}
+          patternMessage="Country name should contain 3-16 characters and shouldn't contain any special characters"
+          className="border-darkgray border-2 text-base  text-black my-2 "
+        />
+      {/* </div> */}
+      <div className="flex gap-2 mb-4 w-[710px]">
+        <InputField
+          label="Town/City"
+          placeholder=""
+          id="city"
+          name="city"
+          register={register}
+          error={errors.city}
+          required={true}
+          pattern={/[A-Za-z0-9]{3,16}$/}
+          patternMessage="City should contain 3-16 characters and shouldn't contain any special characters"
+          className="border-darkgray border-2 text-base  text-black my-2 w-[300px]"
+        />
+        <InputField
+          label="Province/State"
+          placeholder="Lagos"
+          id="state"
+          name="state"
+          register={register}
+          error={errors.state}
+          pattern={/[A-Za-z0-9]{3,16}$/}
+          required={true}
+          patternMessage="Enter your state"
+          className="border-darkgray border-2 text-base  text-black my-2 w-[300px]"
+        />
+        <InputField
+          label="Postal Code"
+          placeholder="101255"
+          id="postalcode"
+          name="postalcode"
+          type="number"
+          register={register}
+          error={errors.postalcode}
+          pattern={/^\d{5}$/}
+          required={true}
+          patternMessage="Enter your postal code"
+          className="border-darkgray border-2 text-base  text-black my-2 w-[300px]"
+        />
+      </div>
+        
+      <div className="flex flex-row gap-3 justify-end">
+        <button className="text-textcol text-base hover:text-white hover:bg-btn px-4 w-[140px]  border-btn border-2 rounded-md ">
+          Cancel
+        </button>
+        <button className="bg-btn text-white p-2 hover:bg-btnlight px-4 rounded-md  py-2">
+          Save Changes
+        </button>
+      </div>
+    </form>
+  </div>
   );
 }
 

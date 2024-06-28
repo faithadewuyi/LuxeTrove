@@ -6,6 +6,7 @@ const InputField = ({
   type,
   id,
   name,
+  
   register,
   error,
   pattern,
@@ -29,7 +30,7 @@ const InputField = ({
             },
           }),
         })}
-        className={`w-full p-2 border-b border-gray hover:border-blue focus:border-blue focus:outline-none  ${
+        className={`w-full p-2   hover:border-btn focus:border-lightbtn focus:outline-none  ${
           className || ""
         }`}
       />

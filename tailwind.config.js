@@ -32,7 +32,7 @@ export default {
         textcol: "#000000",
         black: "#27272B",
         lightgray: "#CCD4DD",
-        darkGray: "#D9D9D9",
+        darkgray: "#D9D9D9",
 
       },
 

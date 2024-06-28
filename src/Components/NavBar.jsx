@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Menu from "./Menu";
-import List from "./List";
+// import List from "./List";
 
 function NavBar(onLinkClick) {
 
@@ -8,7 +8,7 @@ function NavBar(onLinkClick) {
     {title: "HOME", path: "/"},
     {title: "MEN",  path: ""},
     {
-      title: "WOMEN",  path: "",
+      title: "WOMEN",  path: "/women",
       
     },
     {title: "BLOG", path: "/", },
@@ -46,11 +46,7 @@ function NavBar(onLinkClick) {
                 LOGIN
               </Link>
       </ul>
-            
-           
-            
-
-            </div>
+          </div>
           <div className="flex flex-row basis-5/12 space-x-1 lg:space-x-3 justify-end text-gray font-poppins text-xs font-light">
             <div className="relative hidden lg:block">
           
@@ -66,8 +62,12 @@ function NavBar(onLinkClick) {
                 favorite
               </span>
             </Link>
-           
-          <List/>
+            <Link to ="/account">
+            <span className="material-symbols-outlined text-darkblue hover:text-primaryred">
+          person
+        </span>
+           </Link>
+          {/* <List/> */}
             <Link to="/cart">
               <span className="material-symbols-outlined text-darkblue hover:text-primaryred">
                 shopping_cart

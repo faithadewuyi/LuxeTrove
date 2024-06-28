@@ -3,14 +3,14 @@
 function Payment() {
   return (
     <div className="font-inter shadow-md px-4 pl-6 px-auto mt-5 h-[702px] flex flex-col">
-      <h1 className="text-black text-[25px] font-bold py-2 basis-1/6">
+      <h1 className="flex-1 font-medium text-xl basis-1/6">
         Payments
       </h1>
 
-      <h2 className="text-black text-[25px] font-medium py-2 basis-1/6">
+      <h2 className="text-black text-2xl font-normal py-2 basis-1/6">
         Payment Method
       </h2>
-      <h1 className="text-black text-[25px] font-medium py-2 basis-1/6">
+      <h1 className="text-black text-2xl font-normal py-2 basis-1/6">
             Cards
           </h1>
       <div className="flex gap-4 basis-2/6">
@@ -33,10 +33,10 @@ function Payment() {
         </div>
       </div>
       <div className="flex flex-row gap-3 justify-end basis-3/6 items-end">
-        <button className="text-darkblue text-base hover:text-secblue my-4">
+        <button className="text-textcol text-base hover:text-secblue my-4">
           Cancel
         </button>
-        <button className="bg-mred text-white p-2 hover:bg-mred px-4 my-2 py-2">
+        <button className="bg-btn text-white p-2 hover:bg-darkgray px-4 my-2 py-2">
           Save Changes
         </button>
       </div>

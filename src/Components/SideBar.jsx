@@ -20,14 +20,14 @@ function SideBar(onLinkClick) {
   
   const [open, setOpen] = useState(true);
   const Menus = [
-    {title: "Overview", path: "overview"},
+    {title: "Overview", path: "overview/*"},
     {title: "Payment",  path: "payment", icon: <RiSecurePaymentLine />},
     {title: "Shipping Address", path: "shipping", icon: <MdOutlineLocalShipping />},
-    {title: "My Orders", path: "", icon: <BsFillCartCheckFill />},
-    {title: "Gift Cards", path: "", icon: <FaGift />},
-    {title: "My Wallet", path: "", icon: <BsWalletFill /> },
-    {title: "Settings", path: "", icon: <MdSettings />},
-    {title: "Help Center", path: "", icon: <RiCustomerService2Line />},
+    {title: "My Orders", path: "orders", icon: <BsFillCartCheckFill />},
+    {title: "Gift Cards", path: "giftcards", icon: <FaGift />},
+    {title: "My Wallet", path: "wallet", icon: <BsWalletFill /> },
+    {title: "Settings", path: "settings", icon: <MdSettings />},
+    {title: "Help Center", path: "helpcenter", icon: <RiCustomerService2Line />},
     {title: "Log Out", path: "", icon: <MdLogout />},
   ]
   return (
@@ -57,7 +57,9 @@ function SideBar(onLinkClick) {
               {menu.title}
               </span>
           </Link>
+          
           </li>
+        
           </>
         ))}
       </ul>
