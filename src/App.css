@@ -1,0 +1,33 @@
+
+/* styles.css for Help center */
+.custom-list {
+  list-style-type: none;
+  padding-left: 1em;
+ 
+}
+
+.custom-list li::before {
+  content: "•";
+  color: #FFD700; 
+  font-weight: bolder;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 1.5rem; 
+}
+
+.custom-list li::before {
+  content: '';
+  position: absolute;
+  
+  top: 0.5rem; 
+  width: 0.5rem; 
+  height: 0.5rem; 
+  background-color: yellow;
+  border-radius: 50%; 
+}
+

@@ -20,14 +20,19 @@ export default {
     },
 
     extend: {
+      backgroundImage: {
+        'hero-image': "url('/hero.png')",
+
+      },
 
       colors: {
         btn: "#FFD700",
+        btnlight: "#FFEB80",
         footer: "#27272B",
         textcol: "#000000",
         black: "#27272B",
         lightgray: "#CCD4DD",
-        darkGray: "#D9D9D9",
+        darkgray: "#D9D9D9",
 
       },
 
