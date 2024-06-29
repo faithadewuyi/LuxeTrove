@@ -11,7 +11,7 @@ function WomenPage() {
       <NavBar/>
       <div className='overflow-x-hidden sm:overflow-x-hiddden'></div>
       <div  className="lg:w-[1200px] max-w-full m-auto p-5 transform transition-transform duration-500 sm:w-full">
-        <h1 className='text-3xl my-5'>List Products</h1>
+        {/* <h1 className='text-3xl my-5'>List Products</h1> */}
         <div className='grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-4 sm:gap-2'>
         {Product.map((product, key) => 
                 <WomenCart key={key} data={product}/>
