@@ -1,24 +1,17 @@
 
-// import { useState } from 'react'
+
 import './App.css'
-// import { Cart } from './pages/Cart';
-import ChatBot from './Pages/ChatBot';
-// import BecomeSalesRep from './pages/BecomeSalesRep';
-// import BecomeLogisticsProvider from './pages/BecomeLogisticsProvider';
-// import BecomeVendorHub from './pages/BecomeVendorHub';
-
-
+// import ChatBot from './Pages/ChatBot';
 import { Route, Routes } from "react-router-dom";
 
-import Account from "./Pages/Account";
+import Account from "./Pages/Profile Section/Account";
 
 import Home from "./Pages/Home";
-import WishList from "./Pages/WishList";
+import WishList from "./Pages/Profile Section/WishList";
 
 import WomenPage from "./Pages/WomenPage";
-
-
-
+import Details from './Components/PRODUCT PAGE/Details';
+import CartTab from './Components/PRODUCT PAGE/CartTab';
 
 
  
@@ -27,42 +20,20 @@ function App() {
   return (
 
     <div className="bg-white h-full ">
-      {/*
+          
       <div>
-        <BecomeVendorHub />
-      </div>
-       */}
-
-      {/* 
-      <div>
-        <BecomeLogisticsProvider />
-      </div>
-      */}
-      {/*
-      <div>
-        <BecomeSalesRep />
-      </div>
-       */}
-    
-
-      
-      <div>
-        <ChatBot />
+        {/* <ChatBot /> */}
       </div>
       
-      {/*
-      <div>
-        <Cart />
-      </div>
-      */}
-    
-     
+          
      <Routes>
-     
       <Route path="/account/*" element={<Account/>}/>
       <Route path="/" element={<Home/>}/>
       <Route path="/wishlist" element={<WishList/>}/>
       <Route path="/women" element={<WomenPage/>}/>
+      <Route path="/cartpage" element={<CartTab/>}/>
+      <Route path="/women/:slug" element={<Details/>}/>
+     
       
 
      
@@ -74,6 +45,6 @@ function App() {
 
     
 
-  )
-};
+  );
+}
 export default App

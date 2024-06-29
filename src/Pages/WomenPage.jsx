@@ -1,7 +1,7 @@
-import React from 'react'
+
 import Product from '../Components/Product'
 
-import WomenCart from '../Components/WomenCart'
+import WomenCart from '../Components/PRODUCT PAGE/WomenCart'
 import NavBar from '../Components/NavBar'
 
 function WomenPage() {

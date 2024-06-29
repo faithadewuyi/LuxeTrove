@@ -7,7 +7,7 @@ function Overview() {
   
     <div>
   
-<div className="px-auto  shadow-md p-4 pl-6 font-mon text-textcol ">
+    <div className="px-auto  shadow-md p-4 pl-6 font-mon text-textcol ">
            <div className=" mx-auto lg:mx-3 items-center flex ">
           <img
             src="https://randomuser.me/api/portraits/women/79.jpg"

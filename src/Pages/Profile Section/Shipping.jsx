@@ -1,7 +1,7 @@
 
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
-import InputField from '../Components/InputField';
+import InputField from '../../Components/InputField';
 
 function Shipping() {
   const form = useForm({

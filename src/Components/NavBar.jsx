@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Menu from "./Menu";
-// import List from "./List";
+import AddToCart from "./PRODUCT PAGE/AddToCart";
+
 
 function NavBar(onLinkClick) {
 
@@ -15,6 +16,8 @@ function NavBar(onLinkClick) {
     {title: "BRAND", path: "", },
     {title: "SELL ON LUXE", path: "/vendor", },
   ]
+
+  
   return (
     <div className="sticky top-0 w-screen z-50">
        <nav className="  py-4 justify-center">
@@ -67,15 +70,8 @@ function NavBar(onLinkClick) {
           person
         </span>
            </Link>
-          {/* <List/> */}
-            <Link to="/cart">
-              <span className="material-symbols-outlined text-darkblue hover:text-primaryred">
-                shopping_cart
-              </span>
-            </Link>
-            
-                       
-            
+           <AddToCart/>
+                   
           </div>
         </div>
       </nav> 
@@ -86,19 +82,4 @@ function NavBar(onLinkClick) {
 }
 
 export default NavBar
- {/* <Link to="/" className="hover:text-primaryred pt-0.5">
-              HOME
-            </Link>
-
-            <Link to="/women" className="hover:text-primaryred pt-0.5">
-              WOMEN
-            </Link>
-            <Link to="/men" className="hover:text-primaryred pt-0.5">
-              MEN
-            </Link>
-            <Link to="/brands" className="hover:text-primaryred pt-0.5">
-              BRANDS
-            </Link>
-            <Link to="/blo" className="hover:text-primaryred pt-0.5">
-              NewsFeed
-            </Link> */}
+ 

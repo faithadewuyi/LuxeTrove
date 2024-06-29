@@ -15,7 +15,7 @@ const ChatBot = () => {
       setMessages([...messages, { sender: 'user', text: input }]);
       setInput('');
 
-      // To simulate a bot response
+      
       setTimeout(() => {
         setMessages((prevMessages) => [
           ...prevMessages,
@@ -31,7 +31,7 @@ const ChatBot = () => {
 
   return (
     <div className={`fixed bottom-4 right-4 bg-gray-100  border-b-8 border-black shadow-lg w-80 ${Chat ? 'block' : 'hidden'}`}>
-      <div className="mt- p-6 border-b rounded-b-lg border-gray-200 bg-yellow-400 flex flex-wrap relative">
+      <div className="mt- p-6 border-b rounded-b-lg border-gray-200 bg-btn flex flex-wrap relative">
 
       <div className='absolute top-1 right-1' onClick={CloseChatBot}>
           <AiOutlineClose size={20}/>
@@ -92,7 +92,7 @@ const ChatBot = () => {
         </div>
         
         <button
-          className="bg-yellow-400 text-white p-2 rounded-lg"
+          className="bg-btn text-white p-2 rounded-lg"
           
         >
           Send

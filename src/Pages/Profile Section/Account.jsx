@@ -1,5 +1,5 @@
-import NavBar from "../Components/NavBar";
-import SideBar from "../Components/SideBar";
+import NavBar from "../../Components/NavBar";
+import SideBar from "../../Components/SideBar";
 import { Route, Routes, Link, Outlet } from "react-router-dom";
 import { useState } from "react";
 import Overview from "./Overview";
