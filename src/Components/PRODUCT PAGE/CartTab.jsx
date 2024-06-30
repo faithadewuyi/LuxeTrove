@@ -6,14 +6,14 @@ import CartItem from './CartItem';
 
 function CartTab() {
   const carts = useSelector(store => store.cart.items);
-    const statusTab = useSelector(store => store.cart.statusTab);
+    
     const dispatch = useDispatch();
     const handleCloseTabCart = () => {
         dispatch(toggleStatusTab());
     }
   return (
-    <div className="flex justify-center items-center h-scren">
-       <div className="font-bold font-mon text-4xl h-24 ml-40 mt-56 flex">
+    <div className="flex justify-center items-center mb-10">
+       <div className="font-bold font-mon text-4xl h-24 ml-40 mt-20 flex">
             <div className="">
             <h3>CART</h3>
             </div>
@@ -25,7 +25,7 @@ function CartTab() {
         </div> 
     <div className={` bg-amber-700 ml-56 mt-56 shadow-2xl w-96 h-full grid  grid-rows-[60px_1fr_60px] 
       transform transition-transform duration-500
-      ${statusTab === false ? "translate-x-full" : ""}
+     
       `}>
           <h2 className='p-5 text-white text-2xl'>Shopping Cart</h2>
           <div className='p-5 '>

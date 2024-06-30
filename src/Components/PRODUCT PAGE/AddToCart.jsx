@@ -1,7 +1,8 @@
 import {useState, useEffect} from "react"
 import { useSelector, useDispatch } from 'react-redux' 
 
-import { toggleStatusTab } from '../../stores/Cart'
+import { toggle
+  StatusTab } from '../../stores/Cart'
 import { Link } from "react-router-dom";
 
 
