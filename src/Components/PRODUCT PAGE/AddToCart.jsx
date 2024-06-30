@@ -1,28 +1,28 @@
 import {useState, useEffect} from "react"
-import { useSelector, useDispatch } from 'react-redux' 
+import { useSelector } from 'react-redux' 
 
-import { toggle
-  StatusTab } from '../../stores/Cart'
+// import { toggle
+//    } from '../../stores/Cart'
 import { Link } from "react-router-dom";
 
 
 function AddToCart() {
   const [totalQuantity, setTotalQuantity] = useState(0);
     const carts = useSelector(store => store.cart.items);
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     useEffect(() => {
         let total = 0;
         carts.forEach(item => total += item.quantity);
         setTotalQuantity(total);
     }, [carts])
-    const handleOpenTabCart = () => {
-        dispatch(toggleStatusTab());
-    }
+    // const handleOpenTabCart = () => {
+    //     dispatch(toggleStatusTab());
+    // }
   return (
 
    
     <div className=' rounded-full
-    flex justify-center items-center relative cursor-pointer' onClick={handleOpenTabCart}>
+    flex justify-center items-center relative cursor-pointer'>
         <Link
          to="/cartpage">
         <span className="material-symbols-outlined text-darkblue hover:text-primaryred">

@@ -1,10 +1,12 @@
 
-import NavBar from '../../Components/NavBar'
+
+import Footer from '../../components/footer/Footer'
+import Navbar from '../../components/navbar/Navbar'
 function WishList() {
   return (
    
      <div className="w-full h-screen overflow-x-hidden bg-white items-center font-mon font-semibold">
-     <NavBar />
+     <Navbar />
      <div className="  mt-10">
      <h3 className="font-semibold text-xl ml-20 mb-10">WishLists/ All items(4)</h3>
      
@@ -156,6 +158,7 @@ function WishList() {
 
    
       </div>
+      <Footer/>
     </div>
   )
 }

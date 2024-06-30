@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { toggleStatusTab } from '../../stores/Cart';
  import { BsCart3 } from "react-icons/bs";
 import CartItem from './CartItem';
+import Navbar from '../../frontend/components/navbar/Navbar';
+import Footer from '../../frontend/components/footer/Footer';
 
 function CartTab() {
   const carts = useSelector(store => store.cart.items);
@@ -12,6 +14,9 @@ function CartTab() {
         dispatch(toggleStatusTab());
     }
   return (
+    <div>
+        <Navbar/>
+   
     <div className="flex justify-center items-center mb-10">
        <div className="font-bold font-mon text-4xl h-24 ml-40 mt-20 flex">
             <div className="">
@@ -38,7 +43,9 @@ function CartTab() {
               <button className='bg-amber-600 text-white'>CHECKOUT</button>
           </div>
       </div>
-      
+     
+      </div>
+      <Footer/>
       </div>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -96,7 +96,7 @@ const WomenSection = () => {
     <div className="bg-gray-100 p-6 mx-12 my-50">
        <div className="md:flex md:space-x-6 mb-12">
         <div className="md:w-1/2 flex flex-col justify-center mt-6 md:mt-0">
-          <h2 className="text-3xl font-bold text-gray-800">Featured Women's Collection</h2>
+          <h2 className="text-3xl font-bold text-gray-800">Featured Women&apos;s Collection</h2>
           <p className="mt-4 text-gray-600">
             Explore curated luxury thrift items for women
           </p>

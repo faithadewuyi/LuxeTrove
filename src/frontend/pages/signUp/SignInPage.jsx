@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import bgSignUP from './sigUpAssest/signup.jpg'
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa6";
-
+import Footer from '../../components/footer/Footer';
+import Navbar from '../../components/navbar/Navbar';
+import { Link } from 'react-router-dom';
 const SignInPage = () => {
   const [formData, setFormData] = useState({ email: '', password: '', remember: false });
   const [errors, setErrors] = useState({});
@@ -34,6 +36,8 @@ const SignInPage = () => {
   };
 
   return (
+    <div>
+      <Navbar/>
     <div className="min-h-screen md:flex">
       {/* Left Column: Image */}
       <div className="md:w-1/2 bg-cover bg-center sm:w-full " style={{ backgroundImage: `url(${bgSignUP})` }}>
@@ -43,9 +47,11 @@ const SignInPage = () => {
       {/* Right Column: Form */}
       <div className="md:w-1/2 flex items-center justify-center p-8 sm:w-full">
         <div className="max-w-md w-full space-y-8">
-          <h2 className="text-5xl font-extrabold text-textcol pb-4">Sign In</h2>
+          <h2 className="text-5xl font-extrabold text-textcol pb-4 mt-4">Sign In</h2>
           {/* <p className="text-xl text-textcol">Create your account to start shopping</p> */}
-          <span className="sm:text-sm md:text-xl text-textcol mt-3">Don't have an account with Luxe Trove?</span><a href="#"><span className="text-xl font-bold text-btn  pl-2 hover:underline">Sign Up</span></a>
+          <span className="sm:text-sm md:text-xl text-textcol mt-3">Don&apos;t have an account with Luxe Trove?</span>
+          <Link to="/signup"><span className="text-xl font-bold text-btn  pl-2 hover:underline">Sign Up</span>
+          </Link>
     
 
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
@@ -138,6 +144,8 @@ const SignInPage = () => {
           </div>
         </div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 };

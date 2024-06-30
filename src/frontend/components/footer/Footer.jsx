@@ -1,12 +1,13 @@
 
-import React from 'react';
+
 import footerLogo from './footer-asset/footer-logo-s.svg'
 import {BsTwitterX } from "react-icons/bs";
 import { SiLinkedin } from "react-icons/si";
-import { FaYoutube } from 'react-icons/fa';
+
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from 'react-icons/fa';
 import { FaPinterestSquare } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
 // const Footer = () => {
@@ -104,6 +105,7 @@ import { FaPinterestSquare } from 'react-icons/fa';
 
 const Footer = () => {
   return (
+    <>
     <footer className="bg-footer text-white py-8">
       {/* First Row: Newsletter Subscription */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 border-b-2 border-amber-400">
@@ -154,10 +156,19 @@ const Footer = () => {
           <div className='pt-20'>
             <h4 className="font-bold mb-4">MAKE MONEY WITH LUXE TROVE</h4>
             <ul>
-              <li className="mb-2"><a href="#" className="text-footerTextLink hover:underline  hover:text-btn ">Sell With Us</a></li>
-              <li className="mb-2"><a href="#" className="text-footerTextLink  hover:underline  hover:text-btn ">Become A Sales Rep</a></li>
-              <li className="mb-2"><a href="#" className="text-footerTextLink hover:underline  hover:text-btn ">Become A Logistic Provider</a></li>
-              <li className="mb-2"><a href="#" className="text-footerTextLink hover:underline  hover:text-btn ">Become A Vendor Hub</a></li>
+              <li className="mb-2">
+                <Link to="/sell" className="text-footerTextLink hover:underline  hover:text-btn ">Sell With Us
+                </Link>
+                </li>
+              <li className="mb-2">
+                <Link to="/salesrep" className="text-footerTextLink  hover:underline  hover:text-btn ">Become A Sales Rep
+                </Link></li>
+              <li className="mb-2">
+                <Link to="/logistics" className="text-footerTextLink hover:underline  hover:text-btn ">Become A Logistic Provider
+                </Link></li>
+              <li className="mb-2">
+                <Link to ="/vendor"  className="text-footerTextLink hover:underline  hover:text-btn ">Become A Vendor Hub
+                </Link></li>
             </ul>
           </div>
         </div>
@@ -172,13 +183,13 @@ const Footer = () => {
           <div className="flex space-x-4 md:order-2 w-full ">
             <span className='font-bold mb-4'>FOLLOW US ON :</span>
             <a href="#" className="text-gray-400 hover:text-btn ">
-            <FaInstagram  className="w-6 h-6"  / >
+            <FaInstagram  className="w-6 h-6"  />
             </a>
             <a href="#" className="text-gray-400 hover:text-btn">
-            <FaPinterestSquare className="w-6 h-6"  / > 
+            <FaPinterestSquare className="w-6 h-6"  /> 
             </a>
             <a href="#" className="text-gray-400 hover:text-btn">
-            <SiLinkedin className="w-6 h-6"  / >
+            <SiLinkedin className="w-6 h-6"  />
             </a>
             <a href="#" className="text-gray-400 hover:text-btn">
            <FaFacebookSquare className="w-6 h-6"  />
@@ -191,6 +202,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </>
   );
 };
 

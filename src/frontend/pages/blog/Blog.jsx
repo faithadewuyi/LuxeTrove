@@ -1,6 +1,8 @@
-import React from 'react';
+
 import { FaClock } from "react-icons/fa6";
 import BlogBanner from './blogAssets/BlogBanner.png'
+import Navbar from '../../components/navbar/Navbar';
+import Footer from '../../components/footer/Footer';
 
 const BlogPage = () => {
   const blogPosts = [
@@ -89,7 +91,10 @@ const BlogPage = () => {
   ];
 
   return (
-    <div className="bg-gray-100">
+    <div>
+      <Navbar/>
+   
+    <div className="bg-gray-100 mt-40">
       <h2 className="text-5xl font-bold my-20">Blog</h2>
 
       {/* Featured Section */}
@@ -135,6 +140,8 @@ const BlogPage = () => {
           ))}
         </div>
       </section>
+    </div>
+    <Footer/>
     </div>
   );
 };

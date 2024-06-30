@@ -1,5 +1,7 @@
-import React from 'react';
+
 import SellBanner from './sellAssets/SellBanner1.png'
+import Navbar from '../../components/navbar/Navbar';
+import Footer from '../../components/footer/Footer';
 
 const SellWithLuxe = () => {
   const sections = [
@@ -36,7 +38,10 @@ const SellWithLuxe = () => {
   ];
 
   return (
-    <div className="bg-gray-100">
+    <div>
+      <Navbar/>
+  
+    <div className="bg-gray-100 mt-40">
       {/* Hero Section */}
       <section
         className="bg-cover bg-center h-96 flex items-center justify-center text-white text-center "
@@ -48,7 +53,7 @@ const SellWithLuxe = () => {
       {/* Content Section */}
       <section className="py-12 px-6 md:px-0">
         <div className="container mx-auto w-full md:w-4/5">
-          {sections.map((section, index) => (
+          {sections.map((section) => (
             <div key={section.id} className="flex flex-col md:flex-row mb-8">
               <div className="md:w-1/12 flex justify-center mb-4 md:mb-0">
                 <h2 className="text-7xl font-bold">{section.id}</h2>
@@ -66,6 +71,8 @@ const SellWithLuxe = () => {
           </div>
         </div>
       </section>
+    </div>
+    <Footer/>
     </div>
   );
 };

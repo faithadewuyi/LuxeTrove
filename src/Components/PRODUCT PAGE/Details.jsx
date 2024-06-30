@@ -3,7 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Product from '../Product';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../stores/Cart';
-import NavBar from '../NavBar';
+import Navbar from '../../frontend/components/navbar/Navbar';
+import Footer from '../../frontend/components/footer/Footer';
 
 function Details() {
   const { slug } = useParams();
@@ -44,7 +45,7 @@ function Details() {
 
   return (
     <div className="w-full ">
-        <NavBar/>
+        <Navbar/>
         <div className=" grid justify-center  ">
       <h2 className='text-3xl text-center my-4 text-btn font-semibold'>PRODUCT DETAIL</h2>
       <div className='grid grid-cols-1 gap-5 mt-5 max-w-7xl shadow-lg pl-8 mdl:grid-cols-2 '>
@@ -68,6 +69,7 @@ function Details() {
         </div>
       </div>
       </div>
+      <Footer/>
     </div>
   );
 }

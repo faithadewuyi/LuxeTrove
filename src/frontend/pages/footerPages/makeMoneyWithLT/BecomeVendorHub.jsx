@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+// src/components/BecomeVendorHub.jsx
+import  { useState } from 'react';
+import Footer from '../../../components/footer/Footer';
+import Navbar from '../../../components/navbar/Navbar';
 
-const BecomeSalesRep = () => {
+const BecomeVendorHub = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     address: '',
-    experience: '',
-    motivation: '',
+    businessName: '',
+    description: '',
+    website: '',
   });
 
   const handleChange = (e) => {
@@ -26,11 +30,13 @@ const BecomeSalesRep = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto font-mon p-4">
+    <div>
+      <Navbar/>
+    <div className="max-w-2xl mx-auto p-4">
       <div>
-        <img src="SalesRep.jpg" alt="" />
+        <img src="VendorHub2.jpg" alt="" />
         <div>
-          <h1 className="text-3xl font-bold mb-6">Become a Sales Representative</h1>
+            <h1 className="text-3xl font-bold mb-6">Become a Vendor Hub</h1>
         </div>
       </div>
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -79,10 +85,21 @@ const BecomeSalesRep = () => {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-900">Experience</label>
+          <label className="block text-sm font-medium text-gray-900">Business Name</label>
+          <input
+            type="text"
+            name="businessName"
+            value={formData.businessName}
+            onChange={handleChange}
+            className="mt-1 block w-full p-2 border-2 border-yellow-400 rounded-xl"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-900">Description</label>
           <textarea
-            name="experience"
-            value={formData.experience}
+            name="description"
+            value={formData.description}
             onChange={handleChange}
             className="mt-1 block w-full p-2 border-2 border-yellow-400 rounded-xl"
             rows="3"
@@ -90,14 +107,13 @@ const BecomeSalesRep = () => {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-900">Motivation</label>
-          <textarea
-            name="motivation"
-            value={formData.motivation}
+          <label className="block text-sm font-medium text-gray-900">Website (optional)</label>
+          <input
+            type="url"
+            name="website"
+            value={formData.website}
             onChange={handleChange}
             className="mt-1 block w-full p-2 border-2 border-yellow-400 rounded-xl"
-            rows="3"
-            required
           />
         </div>
         <div>
@@ -110,7 +126,9 @@ const BecomeSalesRep = () => {
         </div>
       </form>
     </div>
+    <Footer/>
+    </div>
   );
 };
 
-export default BecomeSalesRep;
+export default BecomeVendorHub;

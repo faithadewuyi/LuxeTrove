@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { FaHeart } from "react-icons/fa";
-import { FaShoppingCart } from "react-icons/fa";
-import { GoPersonFill } from "react-icons/go";
+import  { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoCloseSharp } from "react-icons/io5";
 import LogoOne from "./navbarAssets/logoOne.svg"
 import LogoTwo from "./navbarAssets/logoTwo.svg"
-
+import AddToCart from '../../../Components/PRODUCT PAGE/AddToCart';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -29,15 +28,18 @@ const Navbar = () => {
             />
           </div>
           <div className="flex items-center space-x-4">
-            <a href="#" className="text-gray-600 hover:text-gray-800">
-              <GoPersonFill />
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800">
-              <FaHeart />
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800">
-               <FaShoppingCart />
-            </a>
+            <Link to="/wishlist" className="hidden lg:block">
+              <span className="material-symbols-outlined text-darkblue hover:text-primaryred">
+                favorite
+              </span>
+            </Link>
+            <Link to ="/account">
+            <span className="material-symbols-outlined text-darkblue hover:text-primaryred">
+          person
+        </span>
+           </Link>
+           <AddToCart/>
+           
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden text-black  focus:outline-none"
@@ -58,15 +60,28 @@ const Navbar = () => {
                 className="w-full px-4 py-2 border rounded-md focus:outline-none  focus:ring-btn focus:border-btn focus:z-10"
               />
             </div>
-            <a href="#" className="py-2 text-textcol  hover:font-bold ">Men</a>
-            <a href="#" className="py-2 text-gray-600 hover:font-bold">Women</a>
-            <a href="#" className="py-2 text-gray-600 hover:font-bold">Brands</a>
-            {/* <a href="#" className="py-2 text-gray-600 hover:font-bold">Auction</a> */}
+            <Link 
+            to="/" className="py-2 text-gray-600 hover:font-bold">
+              Home</Link>
+
+            <Link to="/men" className="py-2 text-textcol  hover:font-bold ">Men
+            </Link>
+            <Link 
+            to ="/women" className="py-2 text-gray-600 hover:font-bold">
+              Women
+              </Link>
+            <Link
+             to="/brands" className="py-2 text-gray-600 hover:font-bold">Brands</Link>
+            {/*  */}
             {/* <a href="#" className="py-2  text-red-500 hover:font-bold">Sales</a> */}
-            <a href="#" className="py-2 text-gray-600 hover:font-bold">Blog</a>
+            <Link to="/blog" className="py-2 text-gray-600 hover:font-bold">Blog
+            </Link>
             <div className='flex items-center pt-2  '>
-            <a href="#" className="py-1 mr-5 text-black font-medium  bg-lightgray hover:font-bold px-4 rounded-md text-center w-40 sm:w-50 sm:px-1">Sell with Luxe</a>
-            <a href="#" className="py-1 font-medium md:mt-0  bg-btn px-4 rounded-md text-black hover:font-bold text-center w-40  sm:w-50 sm:px-1">Login</a>
+            <Link to ="/sell" className="py-1 mr-5 text-black font-medium  bg-lightgray hover:font-bold px-4 rounded-md text-center w-40 sm:w-50 sm:px-1">Sell with Luxe
+            </Link>
+            <Link 
+            to="/signin" className="py-1 font-medium md:mt-0  bg-btn px-4 rounded-md text-black hover:font-bold text-center w-40  sm:w-50 sm:px-1">Login
+            </Link>
             </div>
             
           </div>

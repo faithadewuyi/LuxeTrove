@@ -1,5 +1,5 @@
-import NavBar from "../../Components/NavBar";
-import SideBar from "../../Components/SideBar";
+
+import SideBar from "../../../Components/SideBar";
 import { Route, Routes, Link, Outlet } from "react-router-dom";
 import { useState } from "react";
 import Overview from "./Overview";
@@ -10,10 +10,9 @@ import GiftCards from "./GiftCards";
 import Wallet from "./Wallet";
 import HelpCenter from "./HelpCenter";
 import Settings from "./Settings";
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 // import WishList from "./WishList";
-
-
-
 
 function Account() {
   const [isSidebarVisible, setSidebarVisible] = useState(true);
@@ -24,8 +23,8 @@ function Account() {
 
   return (
     <div className="w-full overflow-x-hidden">
-      <NavBar />
-      <div className="flex justify-between w-5/6 mx-auto">
+      <Navbar />
+      <div className="flex justify-between w-5/6 mx-auto mt-40">
         <div className="hidden lg:flex">
           <Link to="/" className="px-2 text-sm">
             Home
@@ -85,7 +84,7 @@ function Account() {
         </div>
       </div>
 
-      {/* <Footer /> */}
+      <Footer /> 
     </div>
   );
 }

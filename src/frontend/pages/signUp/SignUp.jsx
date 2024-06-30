@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import bgSignUP from './sigUpAssest/signup.jpg'
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa6";
@@ -45,7 +45,7 @@ const SignUp = () => {
         <div className="max-w-md w-full space-y-8">
           <h2 className="text-5xl font-extrabold text-textcol pb-4">Sign In</h2>
           {/* <p className="text-xl text-textcol">Create your account to start shopping</p> */}
-          <span className="sm:text-sm md:text-xl text-textcol mt-3">Don't have an account with Luxe Trove?</span><a href="#"><span className="text-xl font-bold text-btn  pl-2 hover:underline">Sign Up</span></a>
+          <span className="sm:text-sm md:text-xl text-textcol mt-3">Don&apos;t have an account with Luxe Trove?</span><a href="#"><span className="text-xl font-bold text-btn  pl-2 hover:underline">Sign Up</span></a>
     
 
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>

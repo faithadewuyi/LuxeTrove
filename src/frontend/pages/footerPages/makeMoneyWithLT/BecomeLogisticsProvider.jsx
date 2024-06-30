@@ -1,15 +1,16 @@
-// src/components/BecomeVendorHub.jsx
-import React, { useState } from 'react';
+import  { useState } from 'react';
+import Footer from '../../../components/footer/Footer';
+import Navbar from '../../../components/navbar/Navbar';
 
-const BecomeVendorHub = () => {
+const BecomeLogisticsProvider = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     address: '',
-    businessName: '',
-    description: '',
-    website: '',
+    company: '',
+    experience: '',
+    interest: '',
   });
 
   const handleChange = (e) => {
@@ -22,17 +23,19 @@ const BecomeVendorHub = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission (e.g., send data to API)
+    
     console.log('Form submitted:', formData);
     alert('Form submitted successfully!');
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-4">
+    <div>
+      <Navbar/>
+    <div className="max-w-2xl mx-auto font-mon p-4 mt-40">
       <div>
-        <img src="VendorHub2.jpg" alt="" />
+        <img src='Logistics.jpeg' alt=''></img>
         <div>
-            <h1 className="text-3xl font-bold mb-6">Become a Vendor Hub</h1>
+            <h1 className="text-3xl font-bold mb-6">Become a Logistics Provider</h1>
         </div>
       </div>
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -81,21 +84,21 @@ const BecomeVendorHub = () => {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-900">Business Name</label>
+          <label className="block text-sm font-medium text-gray-900">Company</label>
           <input
             type="text"
-            name="businessName"
-            value={formData.businessName}
+            name="company"
+            value={formData.company}
             onChange={handleChange}
             className="mt-1 block w-full p-2 border-2 border-yellow-400 rounded-xl"
             required
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-900">Description</label>
+          <label className="block text-sm font-medium text-gray-900">Experience</label>
           <textarea
-            name="description"
-            value={formData.description}
+            name="experience"
+            value={formData.experience}
             onChange={handleChange}
             className="mt-1 block w-full p-2 border-2 border-yellow-400 rounded-xl"
             rows="3"
@@ -103,13 +106,14 @@ const BecomeVendorHub = () => {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-900">Website (optional)</label>
+          <label className="block text-sm font-medium text-gray-900">Area of Interest</label>
           <input
-            type="url"
-            name="website"
-            value={formData.website}
+            type="text"
+            name="interest"
+            value={formData.interest}
             onChange={handleChange}
             className="mt-1 block w-full p-2 border-2 border-yellow-400 rounded-xl"
+            required
           />
         </div>
         <div>
@@ -122,7 +126,9 @@ const BecomeVendorHub = () => {
         </div>
       </form>
     </div>
+    <Footer/>
+    </div>
   );
 };
 
-export default BecomeVendorHub;
+export default BecomeLogisticsProvider;

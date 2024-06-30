@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
-import React from "react";
-import InputField from "../../Components/InputField";
+
+import InputField from "./InputField";
 
 function Settings() {
   const form = useForm({
@@ -18,7 +18,7 @@ function Settings() {
   });
 
   const { register, handleSubmit, reset, formState } = form;
-  const { errors, isSubmitSuccessful, isSubmitting } = formState;
+  const { errors, isSubmitSuccessful } = formState;
 
   const onSubmit = (data) => {
     console.log("submitted", data);

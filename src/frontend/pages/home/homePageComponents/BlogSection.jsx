@@ -1,4 +1,4 @@
-import React from 'react'
+
 import BlogSectionImage from '../homeAssets/blogSection2.jpg'
 
 const BlogSection = () => {

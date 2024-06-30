@@ -1,14 +1,15 @@
 import  { useState } from 'react';
+import Footer from '../../../components/footer/Footer';
+import Navbar from '../../../components/navbar/Navbar';
 
-const BecomeLogisticsProvider = () => {
+const BecomeSalesRep = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     address: '',
-    company: '',
     experience: '',
-    interest: '',
+    motivation: '',
   });
 
   const handleChange = (e) => {
@@ -21,17 +22,19 @@ const BecomeLogisticsProvider = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    // Handle form submission (e.g., send data to API)
     console.log('Form submitted:', formData);
     alert('Form submitted successfully!');
   };
 
   return (
-    <div className="max-w-2xl mx-auto font-mon p-4">
+    <div>
+      <Navbar/>
+    <div className="max-w-2xl mx-auto font-mon p-4 mt-40">
       <div>
-        <img src='Logistics.jpeg' alt=''></img>
+        <img src="SalesRep.jpg" alt="" />
         <div>
-            <h1 className="text-3xl font-bold mb-6">Become a Logistics Provider</h1>
+          <h1 className="text-3xl font-bold mb-6">Become a Sales Representative</h1>
         </div>
       </div>
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -80,17 +83,6 @@ const BecomeLogisticsProvider = () => {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-900">Company</label>
-          <input
-            type="text"
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
-            className="mt-1 block w-full p-2 border-2 border-yellow-400 rounded-xl"
-            required
-          />
-        </div>
-        <div>
           <label className="block text-sm font-medium text-gray-900">Experience</label>
           <textarea
             name="experience"
@@ -102,13 +94,13 @@ const BecomeLogisticsProvider = () => {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-900">Area of Interest</label>
-          <input
-            type="text"
-            name="interest"
-            value={formData.interest}
+          <label className="block text-sm font-medium text-gray-900">Motivation</label>
+          <textarea
+            name="motivation"
+            value={formData.motivation}
             onChange={handleChange}
             className="mt-1 block w-full p-2 border-2 border-yellow-400 rounded-xl"
+            rows="3"
             required
           />
         </div>
@@ -122,7 +114,9 @@ const BecomeLogisticsProvider = () => {
         </div>
       </form>
     </div>
+    <Footer/>
+    </div>
   );
 };
 
-export default BecomeLogisticsProvider;
+export default BecomeSalesRep;
