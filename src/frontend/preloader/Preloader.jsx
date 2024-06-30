@@ -1,5 +1,5 @@
 // src/Preloader.js
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import './Preloader.css';
 import Logo from './preloaderImage/logo.png'
 {/* <img src={Logo} alt="Company Logo" className="w-24 h-24" /> */}

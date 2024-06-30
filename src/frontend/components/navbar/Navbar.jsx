@@ -64,14 +64,14 @@ const Navbar = () => {
             to="/" className="py-2 text-gray-600 hover:font-bold">
               Home</Link>
 
-            <Link to="/men" className="py-2 text-textcol  hover:font-bold ">Men
+            <Link to="" className="py-2 text-textcol  hover:font-bold ">Men
             </Link>
             <Link 
             to ="/women" className="py-2 text-gray-600 hover:font-bold">
               Women
               </Link>
             <Link
-             to="/brands" className="py-2 text-gray-600 hover:font-bold">Brands</Link>
+             to="" className="py-2 text-gray-600 hover:font-bold">Brands</Link>
             {/*  */}
             {/* <a href="#" className="py-2  text-red-500 hover:font-bold">Sales</a> */}
             <Link to="/blog" className="py-2 text-gray-600 hover:font-bold">Blog

@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="bg-white h-full">
-      {/* {loading ? (
+      {/*{loading ? (
         <Preloader setLoading={setLoading} />
       ) : ( */}
         {/* <div className="main-content"> */}

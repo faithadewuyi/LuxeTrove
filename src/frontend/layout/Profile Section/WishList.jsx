@@ -50,7 +50,7 @@ function WishList() {
       {/* Image */}
       <div className="ml-8">
         <img
-          src="sandal.png"
+          src="f.png"
           alt="Louis Vuiton Sandal"
           className="w-32 h-32"
         />
@@ -118,7 +118,7 @@ function WishList() {
       {/* Image */}
       <div className="ml-8">
         <img
-          src="shoe.png"
+          src="i.png"
           alt=" Louis Vuitton Shoe"
           className="w-32 h-32"
         />
