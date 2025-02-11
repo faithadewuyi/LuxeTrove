@@ -1,8 +1,24 @@
-# React + Vite
+# Luxe Trove
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Luxe Trove is your ultimate online destination for **"Pre-Loved"** designer clothing, specializing in exquisite garments that exude timeless elegance and impeccable craftsmanship.  
 
-Currently, two official plugins are available:
+Step into a world where **"Luxury Fashion"** meets sustainability, as we offer a curated selection of authentic, gently-worn treasures from the most coveted designer brands.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Experience the joy of uncovering hidden gems as you browse our meticulously curated selection of pre-owned designer clothing, shoes, and bags for both men and women.  
+
+Each item in our collection has been carefully authenticated and inspected to ensure the highest standards of quality, allowing you to shop with confidence.  
+
+## Technologies Used
+
+- **React.js** – Frontend framework  
+- **Redux** – State management  
+- **Framer Motion** – Animations  
+- **API Integration** – Fetching and displaying dynamic data  
+
+## Features
+
+- Browse and shop from a selection of high-quality, authenticated designer clothing  
+- Sustainable shopping experience with **pre-loved** luxury items  
+- Optimized state management using Redux  
+
+
